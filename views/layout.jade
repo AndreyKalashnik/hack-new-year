@@ -1,7 +1,22 @@
-doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/libs/codemirror/lib/codemirror.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    header
+      nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            a.navbar-brand(href='/') Code Editor
+    main
+      block content
+
+    footer
+    script(src='/libs/angular/angular.js')
+    script(src='/libs/angular-route/angular-route.js')
+    script(src='/libs/angular-mocks/angular-mocks.js')
+    script(src='/libs/codemirror/lib/codemirror.js')
+    script(src='/libs/codemirror/mode/javascript/javascript.js')
+    script(src='/javascripts/codemirror.js')
